@@ -36,18 +36,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
-function randomFact() {
-  // We call the Web Service via AJAX
-  var xmlhttp = new XMLHttpRequest();
-  var url = "https://api.chucknorris.io/jokes/random";
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4  &&  this.status == 200) {
-      var json = JSON.parse(this.responseText);
-      // We parse the JSON response
-      parseJson(json);
-    }		
-  };
 
-  xmlhttp.open("GET", url, true);
-  xmlhttp.send();
-}
